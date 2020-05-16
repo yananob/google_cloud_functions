@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 app = Flask(__name__)
 
 
-def bootstrap(req):
+def hello_bootstrap(req):
     """Responds to any HTTP request.
     Args:
         req (flask.Request): HTTP request object.
@@ -21,9 +21,9 @@ def bootstrap(req):
 
 
 @app.route("/")
-@app.route("/bootstrap")
+@app.route("/hello_bootstrap")
 def mock():
-    return bootstrap(request)
+    return hello_bootstrap(request)
 
 
 if __name__ == "__main__":
